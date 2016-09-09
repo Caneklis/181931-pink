@@ -5,8 +5,91 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <div class="wrapper">
+      <header class="page-header">
+        <div class="logo">
+          <img src="http://placehold.it/150x100" alt="Логотип Pink">
+        </div>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--active"><a href="">Главная</a></li>
+            <li class="main-nav__item main-nav__item--active"><a href="">Фотографии</a></li>
+            <li class="main-nav__item main-nav__item--active"><a href="">Конкурс</a></li>
+            <li class="main-nav__item main-nav__item--active"><a href="">HTML Academy</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="download-app">
+          <div class="download-app__action">
+            <a href="" class="btn">Скачать приложение</a>
+            <ul class="download-app__platforms">
+              <li class="download-app__item download-app--apple"><a href=""><img src="http://placehold.it/150x100" alt="apple"></a></li>
+              <li class="download-app__item download-app--android"><a href=""><img src="http://placehold.it/150x100" alt="android"></a></li>
+              <li class="download-app__item download-app--microsoft"><a href=""><img src="http://placehold.it/150x100" alt="microsoft"></a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="description">
+          <b>Устали от мегаполиса?<br>Нам есть, что вам предложить!</b>
+          <h2 class="description__title">Поднимает настроение</h2>
+          <p class="description__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          <h2 class="description__title">Меняет мир вокруг</h2>
+          <p class="description__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          <h2 class="description__title">Заводит новых друзей</h2>
+          <p class="description__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+        </section>
+        <div class="slider">
+          <input class="slider__input" type="radio" name="advantages" id="slider-input-1" checked>
+          <input class="slider__input" type="radio" name="advantages" id="slider-input-2">
+          <input class="slider__input" type="radio" name="advantages" id="slider-input-3">
+          <img src="http://placehold.it/150x100" alt="">
+          <p class="slider__review-author">Николай Петров</p>
+          <p class="slider__review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          <p class="slider__review-author">Николай Петров</p>
+          <p class="slider__review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          <p class="slider__review-author">Николай Петров</p>
+          <p class="slider__review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          <label class="slider__toggle" for="review-input-1">1</label>
+          <label class="slider__toggle" for="review-input-2">2</label>
+          <label class="slider__toggle" for="review-input-3">3</label>
+        </div>
+        <div class="slider">
+          <input class="slider__input" type="radio" name="advantages" id="slider-input-1" checked>
+          <input class="slider__input" type="radio" name="advantages" id="slider-input-2">
+          <input class="slider__input" type="radio" name="advantages" id="slider-input-3">
+          <table class="price">
+            <caption class="price__cost">Стандарт<br>3,99 USD</caption>
+            <tr>
+              <td class="price__name">Розовый фильтр</td>
+              <td class="price__available">1</td>
+            </tr>
+            <tr>
+              <td class="price__name">Смайлики</td>
+              <td class="price__available">1</td>
+            </tr>
+            <tr>
+              <td class="price__name">Комментарии</td>
+              <td class="price__available">0</td>
+            </tr>
+          </table>
+          <label class="slider__toggle" for="slider-input-1">1</label>
+          <label class="slider__toggle" for="slider-input-2">2</label>
+          <label class="slider__toggle" for="slider-input-3">3</label>
+        </div>
+      </main>
+      <footer class="page-footer">
+        <b>Остались вопросы?<br>Свяжитесь с нами!</b>
+        <ul class="contacts">
+          <li class="contacts__phone"><a href="tel:+78125556666">Звоните <span>+7 (812) 555-66-66</span></a></li>
+          <li class="contacts__mail"><a href="mailto:mail@htmlacademy.ru">Пишите <span>mail@htmlacademy.ru</span></a></li>
+          <li class="contacts__address">Приезжайте в гости <span>ул. Большая Конюшенная, 19/8</span></li>
+        </ul>
+        <div class="map">
+          <img src="http://placehold.it/150x100" alt="Карта">
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

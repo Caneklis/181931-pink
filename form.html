@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="page-header">
+        <div class="logo">
+          <img src="http://placehold.it/150x100" alt="Логотип Pink">
+        </div>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--active"><a href="">Главная</a></li>
+            <li class="main-nav__item main-nav__item--active"><a href="">Фотографии</a></li>
+            <li class="main-nav__item main-nav__item--active"><a href="">Конкурс</a></li>
+            <li class="main-nav__item main-nav__item--active"><a href="">HTML Academy</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="competition">
+          <p class="competition__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+          <form action="get" class="competition__form">
+            <fieldset class="about-user">
+              <label for="surname-field">Фамилия</label>
+              <input id="surname-field" type="text" placeholder="Укажите фамилию">
+              <label for="name-field">Имя</label>
+              <input id="name-field" type="text" placeholder="Введите ваше имя">
+              <label for="patronymic-field">Отчество</label>
+              <input id="patronymic-field" type="text" placeholder="Ну и отчество тоже">
+            </fieldset>
+            <fieldset class="user-choice">
+              <legend>Ваши безбашенные достижения в путешествии</legend>
+              <label for="value-1">Сделал селфи с акулой</label>
+              <input id="value-1" type="checkbox">
+              <label for="value-2">Обгорел на пляже</label>
+              <input id="value-2" type="checkbox">
+              <label for="value-3">Видел Чака Норриса</label>
+              <input id="value-1" type="checkbox">
+              <label for="value-4">Накупил сувениров</label>
+              <input id="value-3" type="checkbox">
+              <label for="value-5">Удержал башню</label>
+              <input id="value-1" type="checkbox">
+              <label for="value-6">Разгромил отель</label>
+              <input id="value-4" type="checkbox">
+            </fieldset>
+            <fieldset class="about-user">
+              <label for="phone-field">Номерок телефона</label>
+              <input id="phone-field" type="tel" placeholder="Номер, пожалуйста">
+              <label for="name-field">Адрес почты</label>
+              <input id="name-field" type="email" placeholder="Введите почту">
+            </fieldset>
+            <fieldset class="user-choice">
+              <legend>С каким приложением путешествовали?</legend>
+              <input name="platform" type="radio" value="ios">Pink для iOS
+              <input name="platform" type="radio" value="android">Pink для Android
+              <input name="platform" type="radio" value="winphone">Windows Phone
+            </fieldset>
+            <fieldset class="about-user">
+              <legend>Опишите свои эмоции</legend>
+              <textarea name="comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </fieldset>
+            <input type="submit" value="Отправить форму">
+          </form>
+        </section>
+      </main>
+      <footer class="page-footer">
+        <div class="logo logo--footer">
+          <img src="http://placehold.it/150x100" alt="Логотип Pink">
+        </div>
+        <ul class="social">
+          <li class="social__item social__item--tw"><a href="">twitter</a></li>
+          <li class="social__item social__item--fb"><a href="">facebook</a></li>
+          <li class="social__item social__item--yt"><a href="">youtube</a></li>
+        </ul>
+        <div class="copyright">Разработано<a href="" class="copyright__link"><img src="http://placehold.it/150x100" alt=""></a></div>
+      </footer>
+    </div>
+  </body>
+</html>
