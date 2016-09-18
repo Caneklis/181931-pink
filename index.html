@@ -5,8 +5,102 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <div class="wrapper">
+      <header class="page-header">
+        <div class="logo">
+          <img src="http://placehold.it/150x100" alt="Логотип Pink">
+        </div>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--active"><a href="">Главная</a></li>
+            <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+            <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+            <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="phone-app">
+          <img src="http://placehold.it/150x100" alt="фото приложения на телефоне">
+        </div>
+        <section class="download-app">
+          <div class="download-app__action">
+            <a href="" class="btn">Скачать приложение</a>
+            <ul class="download-app__platforms">
+              <li class="download-app__item"><a href="#"><img src="http://placehold.it/150x100" alt="apple"></a></li>
+              <li class="download-app__item"><a href="#"><img src="http://placehold.it/150x100" alt="android"></a></li>
+              <li class="download-app__item"><a href="#"><img src="http://placehold.it/150x100" alt="microsoft"></a></li>
+            </ul>
+            <p class="download-app__text">Доступно для iPhone, iPAd, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
+        </section>
+        <section class="description">
+          <b class="description__slogan">Устали от мегаполиса? Нам есть, что вам предложить!</b>
+          <div class="about-app">
+            <h2 class="about-app__title">Поднимает настроение</h2>
+            <p class="about-app__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </div>
+          <div class="about-app">
+            <h2 class="about-app__title">Меняет мир вокруг</h2>
+            <p class="about-app__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </div>
+          <div class="about-app">
+            <h2 class="about-app__title">Заводит новых друзей</h2>
+            <p class="about-app__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+          </div>
+        </section>
+        <div class="slider-review">
+          <input class="slider__input" type="radio" name="advantages" id="slider-input-1" checked>
+          <input class="slider__input" type="radio" name="advantages" id="slider-input-2">
+          <input class="slider__input" type="radio" name="advantages" id="slider-input-3">
+          <img src="http://placehold.it/150x100" alt="">
+          <div class="slide">
+            <p class="slide__review-author">Николай Петров</p>
+            <p class="slide__review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </div>
+          <div class="slide">
+            <p class="slide__review-author">Николай Петров</p>
+            <p class="slide__review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </div>
+          <div class="slide">
+            <p class="slide__review-author">Николай Петров</p>
+            <p class="slide__review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </div>
+          <label class="slider__toggle" for="review-input-1">1</label>
+          <label class="slider__toggle" for="review-input-2">2</label>
+          <label class="slider__toggle" for="review-input-3">3</label>
+        </div>
+        <div class="slider-price">
+          <div class="price">
+            <div class="price__name">Стандарт</div>
+            <div class="price__cost">3,99 USD</div>
+            <div class="price__option">Розовый фильтр</div>
+            <div class="price__available"><img src="" alt="есть"></div>
+            <div class="price__option">Смайлики</div>
+            <div class="price__available"><img src="" alt="есть"></div>
+            <div class="price__option">Комментарии</div>
+            <div class="price__available"><img src="" alt="нет"></div>
+          </div>
+          <input class="slider__input" type="radio" name="advantages" id="slider-input-1" checked>
+          <input class="slider__input" type="radio" name="advantages" id="slider-input-2">
+          <input class="slider__input" type="radio" name="advantages" id="slider-input-3">
+          <label class="slider__toggle" for="slider-input-1">1</label>
+          <label class="slider__toggle" for="slider-input-2">2</label>
+          <label class="slider__toggle" for="slider-input-3">3</label>
+        </div>
+      </main>
+      <footer class="page-footer">
+        <b class="page-footer__slogan">Остались вопросы? Свяжитесь с нами!</b>
+        <ul class="contacts">
+          <li class="contacts__phone">Звоните<a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a></li>
+          <li class="contacts__mail">Пишите<a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+          <li class="contacts__address">Приезжайте в гости <a class="contacts__link" href="#">ул. Большая Конюшенная, 19/8</li>
+        </ul>
+        <div class="map">
+          <img src="http://placehold.it/150x100" alt="Карта">
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
