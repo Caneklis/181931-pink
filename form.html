@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="wrapper">
       <header class="page-header">
         <div class="logo">
-          <img src="http://placehold.it/150x100" alt="Логотип Pink">
+          <img src="img/logo-pink-white-mobile.svg" alt="Логотип Pink">
         </div>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -19,61 +21,97 @@
             <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
           </ul>
         </nav>
-      </header>
-      <main>
         <div class="page-title">
           <h1 class="page-title--title">Конкурс на самое безбашеное путешествие с Пинк</h1>
         </div>
+      </header>
+      <main>
         <section class="competition">
           <p class="competition__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
           <form action="get" class="competition__form">
             <fieldset class="about-user">
-              <label class="about-user__label" for="surname-field">Фамилия</label>
-              <input class="about-user__input" id="surname-field" type="text" placeholder="Укажите фамилию">
-              <label class="about-user__label" for="name-field">Имя</label>
-              <input class="about-user__input" id="name-field" type="text" placeholder="Введите ваше имя">
-              <label class="about-user__label" for="patronymic-field">Отчество</label>
-              <input class="about-user__input" id="patronymic-field" type="text" placeholder="Ну и отчество тоже">
+              <ul class="about-user__list">
+                <li class="about-user__item">
+                  <label class="about-user__label" for="surname-field">Фамилия</label>
+                  <input class="about-user__input" id="surname-field" type="text" placeholder="Укажите фамилию">
+                </li>
+                <li class="about-user__item">
+                  <label class="about-user__label" for="name-field">Имя</label>
+                  <input class="about-user__input" id="name-field" type="text" placeholder="Введите ваше имя">
+                </li>
+                <li class="about-user__item">
+                  <label class="about-user__label" for="patronymic-field">Отчество</label>
+                  <input class="about-user__input" id="patronymic-field" type="text" placeholder="Ну и отчество тоже">
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="user-choice">
               <legend>Ваши безбашенные достижения в путешествии</legend>
-              <label class="user-choice__label-check" for="value-1">Сделал селфи с акулой</label>
-              <input class="user-choice__input-check" id="value-1" type="checkbox">
-              <label class="user-choice__label-check" for="value-2">Обгорел на пляже</label>
-              <input class="user-choice__input-check" id="value-2" type="checkbox">
-              <label class="user-choice__label-check" for="value-3">Видел Чака Норриса</label>
-              <input class="user-choice__input-check" id="value-3" type="checkbox">
-              <label class="user-choice__label-check" for="value-4">Накупил сувениров</label>
-              <input class="user-choice__input-check" id="value-4" type="checkbox">
-              <label class="user-choice__label-check" for="value-5">Удержал башню</label>
-              <input class="user-choice__input-check" id="value-5" type="checkbox">
-              <label class="user-choice__label-check" for="value-6">Разгромил отель</label>
-              <input class="user-choice__input-check" id="value-6" type="checkbox">
+              <ul class="user-choice__list">
+                <li class="user-choice__item">
+                  <label class="user-choice__label-check" for="value-1">Сделал селфи с акулой</label>
+                  <input class="user-choice__input-check" id="value-1" type="checkbox">
+                </li>
+                <li class="user-choice__item">
+                  <label class="user-choice__label-check" for="value-2">Обгорел на пляже</label>
+                  <input class="user-choice__input-check" id="value-2" type="checkbox">
+                </li>
+                <li class="user-choice__item">
+                  <label class="user-choice__label-check" for="value-3">Видел Чака Норриса</label>
+                  <input class="user-choice__input-check" id="value-3" type="checkbox">
+                </li>
+                <li class="user-choice__item">
+                  <label class="user-choice__label-check" for="value-4">Накупил сувениров</label>
+                  <input class="user-choice__input-check" id="value-4" type="checkbox">
+                </li>
+                <li class="user-choice__item">
+                  <label class="user-choice__label-check" for="value-5">Удержал башню</label>
+                  <input class="user-choice__input-check" id="value-5" type="checkbox">
+                </li>
+                <li class="user-choice__item">
+                  <label class="user-choice__label-check" for="value-6">Разгромил отель</label>
+                  <input class="user-choice__input-check" id="value-6" type="checkbox">
+                </li>
+            </ul>
             </fieldset>
             <fieldset class="about-user">
-              <label class="about-user__label" for="phone-field">Номерок телефона</label>
-              <input class="about-user__input" id="phone-field" type="tel" placeholder="Номер, пожалуйста">
-              <label class="about-user__label" for="name-field">Адрес почты</label>
-              <input class="about-user__input" id="name-field" type="email" placeholder="Введите почту">
+              <ul class="about-user__list">
+                <li class="about-user__item">
+                  <label class="about-user__label" for="phone-field">Номерок телефона</label>
+                  <input class="about-user__input" id="phone-field" type="tel" placeholder="Номер, пожалуйста">
+                </li>
+                <li class="about-user__item">
+                  <label class="about-user__label" for="name-field">Адрес почты</label>
+                  <input class="about-user__input" id="name-field" type="email" placeholder="Введите почту">
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="user-choice">
               <legend>С каким приложением путешествовали?</legend>
-              <input class="user-choice__input-radio" name="platform" type="radio" value="ios">Pink для iOS
-              <input class="user-choice__input-radio" name="platform" type="radio" value="android">Pink для Android
-              <input class="user-choice__input-radio" name="platform" type="radio" value="winphone">Windows Phone
+              <ul class="user-choice">
+                <li class="user-choice__item">
+                  <input class="user-choice__input-radio" name="platform" type="radio" value="ios">Pink для iOS
+                </li>
+                <li class="user-choice__item">
+                  <input class="user-choice__input-radio" name="platform" type="radio" value="android">Pink для Android
+                </li>
+                <li class="user-choice__item">
+                  <input class="user-choice__input-radio" name="platform" type="radio" value="winphone">Windows Phone
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="about-user">
               <legend>Опишите свои эмоции</legend>
               <textarea name="comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </fieldset>
-            <input type="submit" value="Отправить форму">
+            <input class="user-choice__btn" type="submit" value="Отправить форму">
             <div class="competition__required-fields"><sup>*</sup> - обязательные поля</div>
           </form>
         </section>
       </main>
       <footer class="page-footer">
         <div class="logo logo--footer">
-          <img src="http://placehold.it/150x100" alt="Логотип Pink">
+          <img src="img/logo-pink-blue-mobile.svg" alt="Логотип Pink">
         </div>
         <ul class="social">
           <li class="social__item social__item--tw"><a href="#">twitter</a></li>
