@@ -23,4 +23,31 @@
     line-height: 32px;
     color: @sec-color;
   }
+
+  @media @desktop {
+    display: block;
+
+
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .main-nav__list {
+      text-align: right;
+      padding: 40px 0;
+    }
+
+    .main-nav__item {
+      display: inline-block;
+      vertical-align: top;
+      background-color: transparent;
+      border: none;
+      margin-right: 80px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+  }
 }

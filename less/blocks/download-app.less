@@ -4,6 +4,20 @@
   text-align: center;
   padding: 28px 0 35px 0;
 
+  .download-app__title {
+    display: none;
+
+    @media @tablet {
+      display: inline-block;
+      vertical-align: top;;
+      margin-bottom: 40px;
+      width: 230px;
+      color: #fff;
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
   p {
     .center();
     font-family: opensans;
@@ -18,5 +32,21 @@
 
   .download-app__item {
     .center();
+  }
+
+  @media @tablet {
+    background-color: transparent;
+    position: absolute;
+    top: 300px;
+    left: 60px;
+    width: 300px;
+  }
+
+  @media @desktop {
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
+    margin-top: 105px;
   }
 }
