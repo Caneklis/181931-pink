@@ -1,6 +1,26 @@
 .price {
-  .outline();
   text-transform: uppercase;
+  background-color: @bg-grey;
+  color: #283645;
+
+  .price__available--column {
+    display: none;
+  }
+
+  .price__wrapper {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  .price__column--base,
+  .price__column--unlim {
+    display: none;
+  }
+
+  .price__column {
+    margin-right: -5px;
+    border: 2px solid #e7e7e7;
+  }
 
   .price__name {
     background-color: #283645;
@@ -24,6 +44,36 @@
     display: inline-block;
     vertical-align: top;
     text-align: center;
-    width: 40px;
+  }
+
+  @media @tablet {
+    text-align: center;
+
+    .price__column {
+      display: inline-block;
+      vertical-align: top;
+      width: 25%;
+    }
+
+    .price__wrapper {
+      width: auto;
+    }
+
+    .price__available {
+      display: block;
+      margin: auto;
+    }
+
+    .price__option {
+      display: none;
+    }
+
+    .price__available--column {
+      display: inline-block;
+      vertical-align: top;
+      padding-top: 47px;
+      text-align: left;
+      text-transform: none;
+  }
   }
 }

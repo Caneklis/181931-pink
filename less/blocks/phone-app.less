@@ -1,20 +1,22 @@
 .phone-app {
-  text-align: center;
-  img {
-    width: 300px;
-    margin-top: 110px;
+  position: relative;
+  z-index: 100;
+  margin-top: 110px;
+  width: 238px;
+  margin-bottom: -5px;/*
+  background-image: url("../img/iphone-hand-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: contain;
+  padding-top: 397px;*/
 
-    @media @tablet {
-      width: 470px;
-      margin-left: 190px;
-    }
-
-    @media @desktop {
-      width: 570px;
-      float: right;
-      margin-left: 0;
-    }
+  @media @tablet {
+    margin-left: 150px;
+    width: 410px;
   }
 
-
+  @media @desktop {
+    float: right;
+    width: 600px;
+  }
 }

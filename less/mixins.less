@@ -18,5 +18,31 @@
 }
 
 .wrapper() {
+  min-width: 280px;
+  margin: 0 auto;
   padding: 0 20px;
+
+  @media @tablet {
+    width: 700px;
+    padding: 0 40px;
+  }
+
+  @media @desktop {
+    width: 940px;
+    padding: 0 130px;
+  }
+}
+
+.visually-hidden() {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

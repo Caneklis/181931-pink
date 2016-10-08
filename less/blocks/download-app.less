@@ -1,52 +1,47 @@
 .download-app {
-  .outline();
   background-color: @prime-color;
+  padding: 28px 0;/*
+  padding-bottom: 35px;*/
   text-align: center;
-  padding: 28px 0 35px 0;
+  color: @sec-color;
+
+  .download-app__wrapper {
+    padding: 0 20px;
+  }
 
   .download-app__title {
     display: none;
-
-    @media @tablet {
-      display: inline-block;
-      vertical-align: top;;
-      margin-bottom: 40px;
-      width: 230px;
-      color: #fff;
-      font-size: 40px;
-      line-height: 40px;
-    }
-  }
-
-  p {
-    .center();
-    font-family: opensans;
-    font-size: 14px;
-    line-height: 32px;
-    color: @sec-color;
-  }
-
-  .download-app__platforms {
-    margin: 30px 0;
   }
 
   .download-app__item {
-    .center();
+    display: inline-block;
+    vertical-align: middle;
+    margin: 30px 0;
+  }
+
+  .download-app__item:nth-child(2n) {
+    margin: 0 30px;
   }
 
   @media @tablet {
-    background-color: transparent;
     position: absolute;
-    top: 300px;
-    left: 60px;
+    top: -60px;
+    left: 0;
+    z-index: 101;
     width: 300px;
+    background-color: transparent;
+    padding-top: 100px;
+
+    .download-app__title {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
   }
 
   @media @desktop {
-    position: relative;
-    top: 0;
-    left: 0;
     float: left;
-    margin-top: 105px;
+    width: 330px;
   }
 }

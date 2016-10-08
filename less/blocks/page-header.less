@@ -1,13 +1,15 @@
 .page-header {
-  .outline();
-  .clearfix();
-  position: relative;
+  min-height: 462px;
   background-color: @prime-color;
-  background-image: url('../img/bg-back-mobile@1x.jpg');
+  background-image:  url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
-  /*.page-header__wrapper {
-    .wrapper();
-  }*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media @desktop {
+    min-height: 853px;
+  }
 }
