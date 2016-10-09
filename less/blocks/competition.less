@@ -1,0 +1,15 @@
+.competition {
+  @media @tablet {
+    .wrapper();
+  }
+
+  .competition__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media @desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}

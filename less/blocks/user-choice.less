@@ -1,0 +1,120 @@
+.user-choice {
+  background-color: @bg-grey;
+  border: none;
+  padding: 0 10px;
+  .user-choice__wrapper {
+  }
+
+  @media @tablet {
+    background-color: @sec-color;
+    border: 2px solid #e5e5e5;
+    order: 4;
+  }
+
+  &--platform {
+    @media @tablet {
+      order: 2;
+    }
+  }
+
+  .user-choice__text {
+    text-align: center;
+    padding: 37px 27px;
+    color: #d22856;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    @media @tablet {
+      display: none;
+    }
+  }
+
+  legend {
+    display: none;
+
+    @media @tablet {
+      display: block;
+      margin-left: 25%;
+      padding: 37px 27px;
+      color: #d22856;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    display: none;
+  }
+
+  .user-choice__item {
+    margin-bottom: 60px;
+  }
+
+  label {
+    padding-left: 70px;
+    padding-top: 8px;
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .user-choice__input-check:checked + .user-choice__label-check::before {
+    content: "";
+    width: 37px;
+    height: 37px;
+    border: 2px solid #000;
+    background-image: url("../img/icon-yes.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .user-choice__input-check + .user-choice__label-check::before {
+    content: "";
+    width: 37px;
+    height: 37px;
+    border: 2px solid #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .user-choice__input-radio:checked + .user-choice__label-radio::before {
+    content: "";
+    width: 37px;
+    height: 37px;
+    border: 2px solid #000;
+    background-image: url("../img/icon-map-marker.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .user-choice__input-radio + .user-choice__label-radio::before {
+    content: "";
+    width: 37px;
+    height: 37px;
+    background-color: @sec-color;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .user-choice__list {
+    @media @desktop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .user-choice__label-check {
+    @media @desktop {
+      width: 30%;
+    }
+  }
+
+}
+
