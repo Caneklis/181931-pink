@@ -8,15 +8,13 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <div class="main-nav__container">
+      <nav class="main-nav main-nav--closed ">
           <div class="main-nav__wrapper">
             <div class="logo">
-              <img src="img/logo-pink-white-mobile.svg" alt="">
+              <img src="img/logo-pink-white-mobile.svg" width="77" height="24" alt="">
             </div>
             <button class="main-nav__toggle" type="button">Открыть меню</button>
-          </div>
-          <ul class="main-nav__list main-nav__list--closed main-nav__list--opened">
+          <ul class="main-nav__list main-nav__list--closed main-nav__list--opened main-nav--nojs">
             <li class="main-nav__item main-nav__item--active"><a href="">Главная</a></li>
             <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
             <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
@@ -26,14 +24,13 @@
       </nav>
       <div class="promo">
         <div class="promo__wrapper">
-          <div class="phone-app">
-            <img src="img/iphone-hand-mobile@1x.png" alt="">
+          <div class="phone-app"><!--
+            <img src="img/iphone-hand-mobile@1x.png" width="258" height="268" alt="">-->
           </div>
           <div class="download-app">
-            <h1 class="download-app__title">Взгляните на жизнь иначе!</h1>
-            <div class="download-app__action">
               <div class="download-app__wrapper">
-                <a href="" class="btn">Скачать приложение</a>
+                <h1 class="download-app__title">Взгляните на жизнь иначе!</h1>
+                <a href="#" class="download__link">Скачать приложение</a>
                 <ul class="download-app__platforms">
                   <li class="download-app__item"><a href="#"><img src="img/logo-apple.svg" alt="apple" width="46" height="57"></a></li>
                   <li class="download-app__item"><a href="#"><img src="img/logo-android.svg" alt="android" width="42" height="47"></a></li>
@@ -41,7 +38,6 @@
                 </ul>
                 <p class="download-app__text">Доступно для iPhone, iPAd, Android, Windows Phone, OS X, Windows 8</p>
               </div>
-            </div>
           </div>
         </div>
       </div>
@@ -49,10 +45,14 @@
     <main>
       <section class="description">
         <div class="description__slogan">
-          <b>Устали от серости мегаполиса?</b>
-          <b>Нам есть, что вам предложить!</b>
+          <div class="description__wrapper">
+            <b>Устали от серости мегаполиса?</b>
+            <b>Нам есть, что вам предложить!</b>
+          </div>
         </div>
-        <div class="description__wrapper">
+        <div class="description__list">
+          <div class="description__wrapper">
+          <div class="description__article">
           <div class="description__item description__item--phone">
             <h2 class="description__title">Поднимает настроение</h2>
             <p class="description__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
@@ -67,6 +67,11 @@
             <h2 class="description__title">Заводит новых друзей</h2>
             <p class="description__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
             <img class="description__picture" src="img/iphone-screen-mobile@1x.png" alt="">
+          </div>
+          </div>
+          <div class="description__picture--show">
+            <img src="img/iphone-screen-mobile@1x.png" width="160" height="322" alt="">
+          </div>
           </div>
         </div>
         <div class="description__research">
@@ -93,14 +98,14 @@
               <p class="slide__review-author">Николай Петров</p>
               <p class="slide__review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </div>
-            <div class="slide">
+            <!--<div class="slide">
               <p class="slide__review-author">Николай Петров</p>
               <p class="slide__review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </div>
             <div class="slide">
               <p class="slide__review-author">Николай Петров</p>
               <p class="slide__review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </div>
+            </div>-->
             <label class="slider__toggle" for="review-input-1">1</label>
             <label class="slider__toggle" for="review-input-2">2</label>
             <label class="slider__toggle" for="review-input-3">3</label>
@@ -110,37 +115,49 @@
         <input class="slider__input" type="radio" name="advantages" id="slider-input-1" checked>
         <input class="slider__input" type="radio" name="advantages" id="slider-input-2" checked>
         <input class="slider__input" type="radio" name="advantages" id="slider-input-3">
-        <div class="price__available--column">
+        <!--<div class="price__available--column">
           <ul>
             <li>Розовый фильтр</li>
             <li>Смайлики</li>
             <li>Комментарии</li>
           </ul>
-          </div>
+          </div>-->
           <div class="price__column price__column--base">
-            <div class="price__name">База</div>
-            <div class="price__cost">1,99 USD</div>
-            <div class="price__wrapper">
-              <div class="price__available"><img src="" alt="есть"></div>
-              <div class="price__available"><img src="" alt="есть"></div>
-              <div class="price__available"><img src="" alt="нет"></div>
+            <div class="price__name">
+              <h3>База</h3>
+            </div>
+            <div class="price__cost">
+              <p>1,99 USD</p>
+            </div>
+            <div class="price__availabele">
+              <div class="price__option">Розовый фильтр<img src="" alt="есть"></div>
+              <div class="price__option">Смайлики<img src="" alt="есть"></div>
+              <div class="price__option">Комментарии<img src="" alt="нет"></div>
             </div>
           </div>
           <div class="price__column">
-            <div class="price__name">Стандарт</div>
-            <div class="price__cost">3,99 USD</div>
+            <div class="price__name">
+              <h3>Стандарт</h3>
+            </div>
+            <div class="price__cost">
+              <p>3,99 USD</p>
+            </div>
             <div class="price__wrapper">
               <div class="price__option price__option--filter">Розовый фильтр</div>
-              <div class="price__available"><img src="" alt="есть"></div>
+              <div class="price__available"><img src="img/icon-yes.svg" width="32" height="21" alt="есть"></div>
               <div class="price__option price__option--smile">Смайлики</div>
-              <div class="price__available"><img src="" alt="есть"></div>
+              <div class="price__available"><img src="img/icon-yes.svg" alt="есть"></div>
               <div class="price__option price__option--comments">Комментарии</div>
-              <div class="price__available"><img src="" alt="нет"></div>
+              <div class="price__available"><img src="img/icon-no.svg" alt="нет"></div>
             </div>
           </div>
           <div class="price__column price__column--unlim">
-            <div class="price__name">Анлим</div>
-            <div class="price__cost">9,99 USD</div>
+            <div class="price__name">
+              <h3>Анлим</h3>
+            </div>
+            <div class="price__cost">
+              <p>9,99 USD</p>
+            </div>
             <div class="price__wrapper">
               <div class="price__available"><img src="" alt="есть"></div>
               <div class="price__available"><img src="" alt="есть"></div>

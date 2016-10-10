@@ -1,23 +1,22 @@
 .description {
-  text-align: center;
   background-color: @bg-grey;
 
   .description__wrapper {
     .wrapper();
-    background-image: url("../img/iphone-screen-mobile@1x.png");
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /*background-image: url("../img/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: bottom;
-    padding-bottom: 37px;
     z-index: 99;
-    background-position-y: 270px;
+    background-position-y: 500px;*/
 
     @media @tablet {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: flex-end;
-      justify-content: space-around;
-      background-position-y: 0;
-      background-position-x: 40px;
+      justify-content: space-between;
     }
 
     @media @desktop {
@@ -28,9 +27,44 @@
     }
 }
 
+
   .description__slogan {
-    padding-top: 30px;
+    margin-top: 44px;
     background-color: @sec-color;
+
+
+  }
+
+  .description__article {
+    display: flex;
+    flex-direction: column;
+
+    @media @tablet {
+      width: 310px;
+      order: 2;
+      text-align: left;
+    }
+  }
+
+  .description__list {
+    position: relative;
+  }
+
+  .description__list::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    min-height: 33px;
+    background-size: contain;
+    width: 100%;
+
+    @media @tablet {
+      display: none;
+    }
   }
 
   b {
@@ -40,6 +74,11 @@
     color: #283645;
     font-weight: normal;
     margin-bottom: 40px;
+
+    @media @tablet {
+      font-size: 40px;
+      line-height: 40px;
+    }
   }
 
   .description__research {
@@ -47,11 +86,26 @@
   }
 
   .description__item {
+      margin-bottom: 37px;
+    &--smile {
+    margin-bottom: 36px;
+
+    @media @tablet {
+      margin-bottom: 0;
+    }
+
+  }
+  }
+
+  .description__item:first-child {
+    margin-top: 84px;
     @media @tablet {
       width: 320px;
       text-align: left;
       margin: 20px 0;
     }
+
+
 
     @media @desktop {
       display: flex;
@@ -60,16 +114,12 @@
     }
   }
 
-  .description__item--smile {
-    margin-bottom: 300px;
-
-    @media @tablet {
-      margin-bottom: 0;
-    }
-
-  }
+  .description__item
 
   .description__title {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 10px;
     @media @desktop {
       position: relative;
       z-index: 2;
@@ -84,6 +134,17 @@
   .description__text {
     @media @desktop {
       order: 3;
+    }
+  }
+
+  .description__picture--show {
+    width: 160px;
+    height: 322px;
+    margin: 0 auto;
+    margin-bottom: -35px;
+
+    @media @tablet {
+      width: 270px
     }
   }
 
