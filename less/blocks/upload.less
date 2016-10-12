@@ -1,0 +1,410 @@
+.upload__wrapper {
+  .wrapper();
+  background-color: @bg-grey;
+}
+
+.upload__text {
+  padding: 44px 30px 41px;
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+
+  &--wrapper {
+    .wrapper();
+    background-color: @sec-color;
+  }
+}
+
+.upload__photo {
+  padding-bottom: 40px;
+  background-color: #f2f2f2;
+}
+
+.upload__editor {
+  padding-bottom: 40px;
+  background-color: #f2f2f2;
+}
+
+.upload__tools {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  font-size: 0;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: auto;
+    left: auto;
+    bottom: 57%;
+    right: auto;
+    width: 100%;
+    height: 1px;
+    background-color: #dddfe0;
+  }
+}
+
+.upload__tool {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5%;
+  font-size: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.upload__tool-icon {
+  width: 48px;
+  height: 48px;
+  fill: #b5b9be;
+  cursor: pointer;
+
+  &--contrast {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.upload__tool-contrast-fill {
+  fill: #b5b9be;
+}
+
+.upload__tool-icon--active {
+  fill: #d22856;
+}
+
+.upload__tool-icon-btn {
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+
+  &--contrast {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.upload__tool-icon-btn:hover .upload__tool-icon {
+  fill: #8d949b;
+}
+
+.upload__tool-icon:hover .upload__tool-contrast-fill {
+  fill: #8d949b;
+}
+
+.upload__tool-range {
+  display: none;
+  border-bottom: 1px solid #dddfe0;
+}
+
+.upload__tool-scale {
+  position: relative;
+  margin: 0 auto;
+  width: 202px;
+  height: 2px;
+  background-color: @prime-color;
+}
+
+.upload__tool-toggle {
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: auto;
+  bottom: auto;
+  right: 36px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #d22856;
+  cursor: pointer;
+}
+
+.upload__tool--active .upload__tool-toggle {
+  background-color: #d22856;
+}
+
+.upload__range {
+  padding: 35px 0;
+  margin-bottom: 38px;
+  width: 100%;
+}
+
+.upload__scale {
+  position: relative;
+  margin: 0 auto;
+  width: 75%;
+  height: 2px;
+  background-color: @prime-color;
+}
+
+.upload__toggle {
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: auto;
+  bottom: auto;
+  right: 36px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #d22856;
+  cursor: pointer;
+}
+
+@media @tablet {
+
+  .upload__wrapper {
+    background-color: @bg-grey;
+  }
+
+  .upload__text {
+    padding: 45px 30px 67px;
+    font-size: 18px;
+  }
+
+  .upload__editor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 16px;
+  }
+
+  .upload__photo {
+    padding: 57px 3.21% 0 0;
+    width: 300px;
+    height: 400px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .upload__tools {
+    padding: 41px 0 0 3.21%;
+    width: 50%;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .upload__tool-range {
+    display: block;
+    width: 78.45%;
+  }
+
+  .upload__tool-scale {
+    width: auto;
+  }
+
+  .upload__range {
+    display: none;
+  }
+
+  .upload__tool {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 25px 18px 22px 0;
+    width: auto;
+    border-bottom: 1px solid #dddfe0;
+
+    &--crop {
+      .upload__tool-toggle {
+        position: absolute;
+        content: "";
+        top: -4px;
+        left: 74%;
+        bottom: auto;
+        right: auto;
+      }
+    }
+
+    &--fill {
+      .upload__tool-toggle {
+        position: absolute;
+        content: "";
+        top: -4px;
+        left: 14.5%;
+        bottom: auto;
+        right: auto;
+      }
+    }
+
+    &--contrast {
+      .upload__tool-toggle {
+        position: absolute;
+        content: "";
+        top: -4px;
+        left: 49%;
+        bottom: auto;
+        right: auto;
+      }
+    }
+  }
+
+  .upload__tool-icon {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      fill: #d22856;
+  }
+
+  .upload__tool-contrast-fill {
+    fill: #d22856;
+  }
+
+  .upload__tool--contrast .upload__tool-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .upload__tool-icon-btn {
+    width: 24px;
+    height: 24px;
+    margin-left: 3px;
+    margin-right: auto;
+
+    &--contrast {
+      width: 16px;
+      height: 16px;
+      margin-left: 7px;
+    }
+  }
+}
+
+@media @desktop {
+  .upload__wrapper {
+    background-color: @sec-color;
+  }
+
+  .upload__text {
+    padding: 6px 30px 66px;
+  }
+
+  .upload__editor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 80px;
+    padding-bottom: 32px;
+    margin: 0 auto 26px;
+  }
+
+  .upload__photo {
+    padding-top: 57px;
+    width: 301px;
+  }
+
+  .upload__tools {
+    padding-top: 57px;
+    width: 50%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .upload__tool {
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #dddfe0;
+
+    &--crop {
+      .upload__tool-toggle {
+        position: absolute;
+        content: "";
+        top: -4px;
+        left: 25%;
+        bottom: auto;
+        right: auto;
+      }
+    }
+
+    &--fill {
+      .upload__tool-toggle {
+        position: absolute;
+        content: "";
+        top: -4px;
+        left: 86%;
+        bottom: auto;
+        right: auto;
+      }
+    }
+
+    &--contrast {
+      .upload__tool-toggle {
+        position: absolute;
+        content: "";
+        top: -4px;
+        left: 56%;
+        bottom: auto;
+        right: auto;
+      }
+    }
+  }
+
+  .upload__range {
+    display: none;
+  }
+
+  .upload__tool-range {
+    display: block;
+      padding: 0;
+      width: 75.6%;
+      border-bottom: none;
+  }
+
+  .upload__tool-scale {
+    position: relative;
+    margin: 0;
+    width: 100%;
+  }
+
+  .upload__tool-icon {
+    width: 47px;
+    height: 47px;
+  }
+
+  .upload__tool--contrast .upload__tool-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .upload__tool-icon-btn {
+    width: 45px;
+    height: 45px;
+
+    &--contrast {
+      padding-top: 4px;
+      width: 44px;
+      height: 44px;
+      margin-left: 2px;
+    }
+  }
+}

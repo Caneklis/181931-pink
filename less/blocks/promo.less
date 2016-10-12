@@ -1,0 +1,42 @@
+.promo {
+  display: flex;
+  flex-direction: column;
+  background-image:  url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto;
+  margin-top: -66px;
+  position: relative;
+  z-index: 1;
+  min-height: 462px;
+
+  @media @tablet {
+    min-height: 729px;
+    margin-top: -110px;
+    background-size: cover;
+    background-position-y: -25px;
+  }
+
+  @media @desktop {
+    background-size: 120%;
+  }
+
+  .promo__wrapper {
+    @media @tablet {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 40px;
+      margin-top: 190px;
+    }
+
+    @media @desktop {
+      display: flex;
+      align-items: flex-end;
+      min-height: 853px;
+      width: 1200px;
+      padding: 0 130px;
+      margin: auto;
+    }
+  }
+}

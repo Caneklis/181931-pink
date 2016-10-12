@@ -1,3 +1,149 @@
 .about-user {
-  .outline();
+  border: none;
+  .about-user__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media @tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+
+
+  .about-user__label {
+    padding-left: 22px;
+    color: #d22856;
+    line-height: 30px;
+
+    @media @tablet {
+      width: 20%;
+      padding-left: 0;
+      }
+  }
+
+  .about-user__label--name {
+    @media @tablet {
+      width: 10%;
+      }
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    padding: 20px 22px;
+    color: #283645;
+    border: none;
+    outline: 2px solid #e5e5e5;
+    margin-bottom: 20px;
+  }
+
+  .about-user__input {
+    @media @tablet {
+      width: 70%;
+    }
+  }
+
+  .about-user__input--name {
+    @media @tablet {
+      width: 75%;
+    }
+  }
+
+  legend {
+      margin-left: 25%;
+      padding: 37px 0 20px 0;
+      color: #d22856;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+  textarea {
+    resize: none;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  .about-user__btn {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #2aab6d;
+    color: @sec-color;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    padding: 20px 0;
+    margin-bottom: 50px;
+  }
+
+  .about-user__required-fields {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  sup {
+    color: #d22856;
+  }
+
+
+
+  &--textarea {
+    @media @tablet {
+      order: 4;
+    }
+  }
+
+  .about-user__label--phone {
+    @media @tablet {
+      width: 100%;
+      order: 2;
+    }
+  }
+
+  .about-user__label--email {
+    @media @tablet {
+      width: 100%;
+      order: 4;
+    }
+  }
+
+  .about-user__linput--phone {
+    @media @tablet {
+      width: 100%;
+      order: 3;
+    }
+  }
+
+  .about-user__input--phone {
+    @media @tablet {
+      width: 100%;
+      order: 1;
+    }
+  }
+
+  @media @desktop {
+    width: 50%;
+  }
+
+  &--contact {
+    @media @tablet {
+      order: 3;
+    }
+    @media @desktop {
+      width: 100%;
+    }
+  }
+
+  &--textarea {
+    @media @desktop {
+      width: 100%;
+    }
+  }
 }
