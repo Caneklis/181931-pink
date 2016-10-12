@@ -1,15 +1,36 @@
 .competition {
-  @media @tablet {
-    .wrapper();
+  min-width: 320px;
+}
+
+.competition__info {
+  padding: 46px 20px 35px;
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+
+  span {
+    display: none;
   }
+}
 
-  .competition__wrapper {
-    display: flex;
-    flex-direction: column;
+@media @tablet {
+  .competition__info {
+    margin: 0 auto;
+    padding: 92px 20px 73px;
+    width: 510px;
+    font-size: 18px;
 
-    @media @desktop {
-      flex-direction: row;
-      flex-wrap: wrap;
+    span {
+      display: inline;
     }
+  }
+}
+
+@media @desktop {
+  .competition__info {
+    width: 761px;
+    margin: 0 auto;
+    padding: 93px 20px 35px;
+    margin-bottom: 34px;
   }
 }

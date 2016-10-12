@@ -1,5 +1,5 @@
 .description {
-  background-color: @bg-grey;
+  background-color: @sec-color;
 
   .description__wrapper {
     .wrapper();
@@ -15,8 +15,7 @@
     @media @tablet {
       display: flex;
       flex-direction: row;
-      align-items: flex-end;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
 
     @media @desktop {
@@ -25,14 +24,16 @@
       justify-content: space-around;
       background-image: none;
     }
+
+    &--research {
+      justify-content: space-between;
+    }
 }
 
 
   .description__slogan {
     margin-top: 44px;
     background-color: @sec-color;
-
-
   }
 
   .description__article {
@@ -40,30 +41,38 @@
     flex-direction: column;
 
     @media @tablet {
-      width: 310px;
+      width: 50%;
       order: 2;
       text-align: left;
+      margin-left: 30px;
+    }
+
+    @media @desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: -100px;
     }
   }
 
   .description__list {
     position: relative;
-  }
+    background-color: @bg-grey;
 
-  .description__list::before {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url("../img/bg-triangle-white.svg");
-    background-repeat: no-repeat;
-    min-height: 33px;
-    background-size: contain;
-    width: 100%;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: auto;
+      right: auto;
+      width: 100%;
+      height: 25px;
+      background: linear-gradient(to bottom right, #fff 50%, #f2f2f2 50.5%);
+    }
 
     @media @tablet {
-      display: none;
+      padding-top: 28px;
+
     }
   }
 
@@ -83,18 +92,101 @@
 
   .description__research {
     display: none;
+
+    @media @tablet {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      z-index: 20;
+      background-color: @sec-color;
+      padding-top: 58px;
+    }
+
+    @media @desktop {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      z-index: 20;
+      background-color: @bg-grey;
+    }
+
+    &--wrapper {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      z-index: 20;
+      background-color: @sec-color;
+      padding: 0 40px;
+      min-width: 700px;
+
+      @media @desktop {
+        min-width: 1200px;
+        padding: 0 130px;
+      }
+    }
+  }
+
+  .description__research-pic {
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 53px;
+      left: 15px;
+      content: "";
+      width: 180px;
+      height: 180px;
+      border: 14px solid #d22856;
+      border-radius: 50%;
+    }
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      content: "24";
+      color: #d22856;
+      font-size: 96px;
+    }
+  }
+
+  .description__research-item {
+    text-align: left;
+    width: 310px;
+
+    @media @desktop {
+      width: 570px;
+    }
+  }
+
+  .description__research-title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .description__research-text {
+    padding: 20px 0;
+  }
+
+  .description__research-link {
+    color: #d22856;
+    text-decoration: underline;
   }
 
   .description__item {
-      margin-bottom: 37px;
+    margin-bottom: 37px;
+    display: flex;
+    flex-direction: column;
     &--smile {
-    margin-bottom: 36px;
+      margin-bottom: 36px;
 
-    @media @tablet {
-      margin-bottom: 0;
+      @media @tablet {
+        margin-bottom: 0;
+      }
     }
 
-  }
+    @media @desktop {
+      margin-top: 84px;
+    }
   }
 
   .description__item:first-child {
@@ -113,8 +205,6 @@
       text-align: center;
     }
   }
-
-  .description__item
 
   .description__title {
     margin-bottom: 20px;
@@ -144,7 +234,13 @@
     margin-bottom: -35px;
 
     @media @tablet {
-      width: 270px
+      width: 270px;
+      height: 550px;
+      margin-right: 44px;
+    }
+
+    @media @desktop {
+      display: none;
     }
   }
 
@@ -161,7 +257,4 @@
     }
   }
 
-
-  @media @desktop {
-  }
 }

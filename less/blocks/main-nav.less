@@ -5,15 +5,16 @@
     background-color: fade(@bg-nav, 80%);
     .outline();
   .main-nav__wrapper {
-    min-width: 320px;/*
+    min-width: 320px;
 
-    @media @tablet {
+    /*@media @tablet {
 
-    }
+    }*/
     @media @desktop {
       width: 1200px;
+      padding: 0 130px;
       margin: 0 auto;
-    }*/
+    }
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -22,9 +23,6 @@
 
 
   }
-  @media @desktop {
-      display: block;
-    }
 
   &--opened {
     background-color: #283645;
@@ -69,11 +67,14 @@
 
     @media @desktop {
       display: flex;
+      width: auto;
     }
 
 
     .main-nav__item {
       text-align: center;
+      font-size: 18px;
+      line-height: 18px;
 
       @media @desktop {
         margin-left: 80px;

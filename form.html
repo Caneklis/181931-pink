@@ -8,179 +8,187 @@
   </head>
   <body>
       <header class="page-header">
-        <nav class="main-nav main-nav--closed main-nav--nojs">
-          <div class="main-nav__container">
-            <div class="main-nav__wrapper">
-              <div class="logo">
-                <img src="img/logo-pink-white-mobile.svg" alt="">
-              </div>
-              <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <nav class="main-nav main-nav--closed ">
+          <div class="main-nav__wrapper">
+            <div class="logo">
+              <a href="index.html" class="logo__link"><img src="img/logo-pink-white-mobile.svg" width="77" height="24" alt=""></a>
             </div>
-            <ul class="main-nav__list main-nav__list--closed main-nav__list--opened">
-              <li class="main-nav__item main-nav__item--active"><a href="">Главная</a></li>
-              <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
-              <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-              <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
-            </ul>
-          </div>
-        </nav>
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav__list main-nav__list--closed main-nav__list--opened main-nav--nojs">
+            <li class="main-nav__item"><a href="index.html">Главная</a></li>
+            <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+            <li class="main-nav__item main-nav__item--active"><a href="form.html">Конкурс</a></li>
+            <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
+          </ul>
+        </div>
+      </nav>
         <div class="page-title">
-          <h1 class="page-title--title">Конкурс на самое безбашеное путешествие с Пинк</h1>
+          <div class="page-title__wrapper">
+            <h1 class="page-title__title">Конкурс на самое безбашеное путешествие с Пинк</h1>
+          </div>
         </div>
       </header>
       <main>
         <section class="competition">
-          <p class="competition__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="visually-hidden">Пожалуйста, заполните форму ниже:</span></p>
-          <form action="get" class="competition__form">
-            <div class="competition__wrapper">
-            <fieldset class="about-user">
-              <div class="about-user__wrapper"><!--
-                <ul class="about-user__list">
-                  <li class="about-user__item">-->
-                    <label class="about-user__label" for="surname-field">Фамилия:</label>
-                    <input class="about-user__input" id="surname-field" type="text" placeholder="Укажите фамилию">
-                  <!--</li>
-                  <li class="about-user__item">-->
-                    <label class="about-user__label about-user__label--name" for="name-field">Имя:</label>
-                    <input class="about-user__input about-user__input--name" id="name-field" type="text" placeholder="Введите ваше имя">
-                  <!--</li>
-                  <li class="about-user__item">-->
-                    <label class="about-user__label" for="patronymic-field">Отчество:</label>
-                    <input class="about-user__input" id="patronymic-field" type="text" placeholder="Ну и отчество тоже">
-                 <!-- </li>
-                </ul>-->
+          <p class="competition__info">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span> Пожалуйста, заполните форму ниже:</span></p>
+          <form class="story-form" onsubmit="return validate()">
+            <div class="story-form__item  story-form__item--name">
+              <div class="story-form__field-group">
+                <label class="story-form__caption" for="surname-field">Фамилия:</label>
+                <input class="story-form__field" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию">
               </div>
-            </fieldset>
-            <fieldset class="user-choice user-choice--achiv">
-              <legend>Ваши безбашенные достижения в путешествии</legend>
-              <div class="user-choice__wrapper">
-                <p class="user-choice__text">Ваши безбашенные достижения в путешествии</p>
-                <ul class="user-choice__list">
-                  <li class="user-choice__item">
-                    <input class="user-choice__input-check" id="value-1" type="checkbox" checked>
-                    <label class="user-choice__label-check" for="value-1">Сделал селфи с акулой</label>
-                  </li>
-                  <li class="user-choice__item">
-                    <input class="user-choice__input-check" id="value-2" type="checkbox" checked>
-                    <label class="user-choice__label-check" for="value-2">Обгорел на пляже</label>
-                  </li>
-                  <li class="user-choice__item">
-                    <input class="user-choice__input-check" id="value-3" type="checkbox">
-                    <label class="user-choice__label-check" for="value-3">Видел Чака Норриса</label>
-                  </li>
-                  <li class="user-choice__item">
-                    <input class="user-choice__input-check" id="value-4" type="checkbox">
-                    <label class="user-choice__label-check" for="value-4">Накупил сувениров</label>
-                  </li>
-                  <li class="user-choice__item">
-                    <input class="user-choice__input-check" id="value-5" type="checkbox" checked>
-                    <label class="user-choice__label-check" for="value-5">Удержал башню</label>
-                  </li>
-                  <li class="user-choice__item">
-                    <input class="user-choice__input-check" id="value-6" type="checkbox">
-                    <label class="user-choice__label-check" for="value-6">Разгромил отель</label>
-                  </li>
-              </ul>
+              <div class="story-form__field-group">
+                <label class="story-form__caption" for="firstname-field">Имя:</label>
+                  <input class="story-form__field" type="text" name="firstname" id="firstname-field" placeholder="Введите ваше имя">
+              </div>
+              <div class="story-form__field-group">
+                <label class="story-form__caption" for="patronym-field">Отчество:</label>
+                <input class="story-form__field" type="text" name="patronym" id="patronym-field" placeholder="Ну и отчество тоже">
+              </div>
             </div>
-            </fieldset>
-            <fieldset class="about-user about-user--contact">
-              <div class="about-user__wrapper about-user__wrapper--contact"><!--
-              <ul class="about-user__list">
-                <li class="about-user__item">-->
-                  <label class="about-user__label about-user__label--phone" for="phone-field">Номерок телефона</label>
-                  <input class="about-user__input about-user__input--phone" id="phone-field" type="tel" placeholder="Номер, пожалуйста">
-                <!--</li>
-                <li class="about-user__item">-->
-                  <label class="about-user__label about-user__label--email" for="name-field">Адрес почты</label>
-                  <input class="about-user__input about-user__input--email" id="name-field" type="email" placeholder="Введите почту">
-               <!-- </li>
-              </ul>-->
+            <fieldset class="story-form__item  story-form__item--achievements">
+              <legend class="story-form__item-title  story-form__item-title--achievements"><span>Ваши безбашенные достижения в путешествии</span></legend>
+              <div class="story-form__checkbox-wrapper">
+                <div class="story-form__checkbox-group">
+                  <input class="story-form__checkbox" type="checkbox" id="checkbox-1" checked>
+                  <label class="story-form__label" for="checkbox-1">Сделал селфи с акулой</label>
+                </div>
+                <div class="story-form__checkbox-group">
+                  <input class="story-form__checkbox" type="checkbox" id="checkbox-2" checked>
+                  <label class="story-form__label" for="checkbox-2">Обгорел на пляже</label>
+                </div>
+                <div class="story-form__checkbox-group">
+                  <input class="story-form__checkbox" type="checkbox" id="checkbox-3">
+                  <label class="story-form__label" for="checkbox-3">Видел Чака Норриса</label>
+                </div>
+                <div class="story-form__checkbox-group">
+                  <input class="story-form__checkbox" type="checkbox" id="checkbox-4">
+                  <label class="story-form__label" for="checkbox-4">Накупил сувениров</label>
+                </div>
+                <div class="story-form__checkbox-group">
+                  <input class="story-form__checkbox" type="checkbox" id="checkbox-5" checked>
+                  <label class="story-form__label" for="checkbox-5">Удержал башню</label>
+                </div>
+                <div class="story-form__checkbox-group">
+                  <input class="story-form__checkbox" type="checkbox" id="checkbox-6">
+                  <label class="story-form__label" for="checkbox-6">Разгромил отель</label>
+                </div>
               </div>
             </fieldset>
-            <fieldset class="user-choice user-choice--platform">
-              <legend>С каким приложением путешествовали?</legend>
-              <div class="user-choice__wrapper">
-              <p class="user-choice__text">С каким приложением путешествовали?</p>
-              <ul class="user-choice">
-                <li class="user-choice__item">
-                  <input class="user-choice__input-radio" name="platform" type="radio" value="ios" id="ios">
-                  <label class="user-choice__label-radio" for="ios">Pink для iOS</label>
-                </li>
-                <li class="user-choice__item">
-                  <input class="user-choice__input-radio" name="platform" type="radio" value="android" id="android">
-                  <label class="user-choice__label-radio" for="android">Pink для Android</label>
-                </li>
-                <li class="user-choice__item">
-                  <input class="user-choice__input-radio" name="platform" type="radio" value="winphone" id="winphone">
-                  <label class="user-choice__label-radio" for="winphone">Windows Phone</label>
-                </li>
-              </ul>
+            <fieldset class="story-form__item  story-form__item--user-contacts">
+              <legend class="story-form__item-title  story-form__item-title--user-contacts"><span>Контактная информация</span></legend>
+              <div class="story-form__user-contacts-wrapper">
+                <label class="story-form__caption  story-form__caption--contacts" for="tel">Номерок телефончика</label>
+                <input class="story-form__field  story-form__field--contacts  story-form__field--tel" id="tel" type="tel" name="tel" placeholder="Номер, пожалуйста">
+                <label class="story-form__caption  story-form__caption--contacts" for="address">адресок почты</label>
+                <input class="story-form__field  story-form__field--contacts  story-form__field--mail" id="address" type="email" name="mail" placeholder="Введите почту">
               </div>
             </fieldset>
-            <fieldset class="about-user about-user--textarea">
-              <legend>Опишите свои эмоции</legend>
-
-              <div class="about-user__wrapper">
-              <textarea name="comment" placeholder="Можно прям в красках, не стесняясь в выражениях" rows="6"></textarea>
-
-            <button class="about-user__btn" type="submit">Отправить форму</button>
-            <div class="about-user__required-fields"><sup>*</sup> - обязательные поля</div>
-              </div>
+            <fieldset class="story-form__item  story-form__item--platform">
+              <legend class="story-form__item-title  story-form__item-title--platform"><span>С каким приложением путешествовали?</span></legend>
+              <input class="story-form__radio" id="radio-1" type="radio" name="app-type-radio" checked>
+              <label class="story-form__label  story-form__label--radio" for="radio-1">Pink для iOS</label>
+              <input class="story-form__radio" id="radio-2" type="radio" name="app-type-radio">
+              <label class="story-form__label  story-form__label--radio" for="radio-2">Pink на Android</label>
+              <input class="story-form__radio" id="radio-3" type="radio" name="app-type-radio">
+              <label class="story-form__label  story-form__label--radio" for="radio-3">Windows Phone</label>
             </fieldset>
-            </div>
+            <fieldset class="story-form__item  story-form__item--emotions">
+              <legend class="story-form__item-title  story-form__item-title--emotions"><span>Опишите свои эмоции</span></legend>
+              <textarea class="story-form__field  story-form__field--textarea" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </fieldset>
+            <fieldset class="story-form__item  story-form__item--buttons">
+              <div class="story-form__buttons-wrapper">
+                <button class="form-btn" id="sendFormBtn" type="submit">Отправить форму</button>
+                <div class="story-form__legend">&#10038; — обязательные <span>для заполнения </span>поля</div>
+                </div>
+            </fieldset>
           </form>
         </section>
       </main>
       <footer class="page-footer">
-      <b class="page-footer__slogan">Остались вопросы? Свяжитесь с нами!</b>
-      <ul class="contacts">
-        <li class="contacts__phone">Звоните<a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a></li>
-        <li class="contacts__mail">Пишите<a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
-        <li class="contacts__address">Приезжайте в гости <a class="contacts__link" href="#">ул. Большая Конюшенная, 19/8</a></li>
-      </ul>
-      <div class="map"></div>
-      <div class="page-footer__wrapper">
-        <div class="logo logo--footer">
-            <img src="img/logo-pink-blue-mobile.svg" alt="Логотип Pink">
-          </div>
-          <ul class="social">
-            <li class="social__item social__item--tw">
-              <a href="#"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
-              <g id="W6EeEF_1_"><g><path fill-rule="evenodd" fill="#d22856" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/></g></g></svg>
-              </a>
-            </li>
-            <li class="social__item social__item--fb">
-              <a href="#"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.673px" height="18.944px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve"><path fill="#d22856" d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/></svg>
-              </a>
-            </li>
-            <li class="social__item social__item--yt">
-              <a href="#"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.64px" height="13.96px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve"><path fill="#d22856" d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/></svg>
-              </a>
-            </li>
-          </ul>
-        <div class="page-footer__copyright">Разработано<a href="https://htmlacademy.ru/" class="copyright__link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27" height="34"><path fill="#d22856" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg></a></div>
-      </div>
-    </footer>
+        <div class="page-footer__wrapper page-footer__wrapper--inner">
+          <div class="logo logo--footer">
+              <img src="img/logo-pink-blue-mobile.svg" alt="Логотип Pink">
+            </div>
+            <ul class="social">
+              <li class="social__item social__item--tw">
+                <a href="#"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+                <g id="W6EeEF_1_"><g><path fill-rule="evenodd" fill="#d22856" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/></g></g></svg>
+                </a>
+              </li>
+              <li class="social__item social__item--fb">
+                <a href="#"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.673px" height="18.944px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve"><path fill="#d22856" d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/></svg>
+                </a>
+              </li>
+              <li class="social__item social__item--yt">
+                <a href="#"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.64px" height="13.96px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve"><path fill="#d22856" d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/></svg>
+                </a>
+              </li>
+            </ul>
+          <div class="page-footer__copyright">Разработано<a href="https://htmlacademy.ru/" class="copyright__link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27" height="34"><path fill="#d22856" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg></a></div>
+        </div>
+      </footer>
+    <div class="form-popup  form-popup--desktop  form-popup--ok">
+            <h3 class="form-popup__title">Ваша заявка отправлена</h3>
+            <p class="form-popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и
+            оповестим вас.</p>
+            <div class="form-popup__wrap">
+                <button class="form-btn  form-btn--close" type="button">Закрыть окно</button>
+            </div>
+        </div>
+        <div class="form-popup  form-popup--failure">
+            <h3 class="form-popup__header">Что-то пошло не так!</h3>
+            <p class="form-popup__text  form-popup__text--failure">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            <button class="form-btn  form-btn--close" type="button">Ok</button>
+</div>
     <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-    var navList = document.querySelector('.main-nav__list')
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+      var navList = document.querySelector('.main-nav__list')
 
-    navMain.classList.remove('main-nav--nojs');
+      navMain.classList.remove('main-nav--nojs');
 
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-        navList.classList.remove('main-nav__list--closed');
-        navList.classList.add('main-nav__list--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-        navList.classList.add('main-nav__list--closed');
-        navList.classList.remove('main-nav__list--opened');
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+          navList.classList.remove('main-nav__list--closed');
+          navList.classList.add('main-nav__list--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+          navList.classList.add('main-nav__list--closed');
+          navList.classList.remove('main-nav__list--opened');
+        }
+      });
+    </script>
+
+    <script>
+      var sendFormBtn = document.getElementById('sendFormBtn');
+      var storyFormInputs = document.querySelectorAll('.story-form input:not([type="checkbox"]):not([type="radio"])');
+      var popupOk = document.querySelector('.form-popup--ok');
+      var popupFailure = document.querySelector('.form-popup--failure');
+      var closeBtns = document.querySelectorAll('.form-btn--close');
+      function validate() {
+        for(var i = 0; i < storyFormInputs.length; i++) {
+
+        if(!storyFormInputs[i].value) {
+            popupFailure.classList.add('form-popup--show');
+            return false;
+        }
+        }
       }
-    });
+
+      if(popupOk) {
+        popupOk.classList.add('form-popup--show');
+        for(var i = 0; i < closeBtns.length; i++) {
+          closeBtns[i].addEventListener('click', function() {
+          popupOk.classList.remove('form-popup--show');
+          popupFailure.classList.remove('form-popup--show');
+        });
+        }
+      }
     </script>
   </body>
 </html>

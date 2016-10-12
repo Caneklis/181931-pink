@@ -1,65 +1,86 @@
 .page-footer {
   text-align: center;
+  padding-top: 48px;
 
   .page-footer__slogan {
-    display: inline-block;
-    vertical-align: top;
     font-weight: normal;
     font-size: 24px;
-    color: #c7c9cb;
-    margin-bottom: 40px;
-  }
-
-  .contacts {
-    font-size: 18px;
     color: #283645;
-    font-weight: bold;
-  }
+    margin-bottom: 40px;
 
-  .contacts__link {
-    display: inline-block;
-    vertical-align: top;
-    width: 100%;
-    font-size: 24px;
-    font-weight: normal;
-    color: #d22856;
-    margin-bottom: 30px;
+    @media @tablet {
+      font-size: 40px;
+      line-height: 40px;
+      padding: 0 100px;
+    }
   }
-
-  .page-footer__wrapper {
-    display: none;
-  }
-
-  @media @tablet {
 
   .page-footer__wrapper {
     display: flex;
-    justify-content: space-between;
-    .wrapper();
-    padding: 39px 0;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    width: 320px;
+    margin: auto;
+
+    @media @tablet {
+      padding: 0 40px;
+      width: 700px;
+      margin: auto;
+    }
 
     @media @desktop {
-      padding: 100px 0 72px 0;
-    }
-  }
-
-
-  .page-footer__slogan {
-    width: 270px;
-  }
-
-  .page-footer__copyright {
-    display: block;
-    width: 150px;
-  }
-
-    a {
-      display: inline-block;vertical-align: middle;
+      width: 1200px;
+      padding: 0 130px;
     }
 
-    .contacts li {
-      display: inline-block;
-      vertical-align: top;
+    &--inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      width: 320px;
+      margin: auto;
+
+      @media @tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+        width: 700px;
+        margin: auto;
+      }
+
+      @media @desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding:  0 130px;
+        width: 1200px;
+        padding: 0 130px;
+      }
+    }
+
+    &--index-mobile {
+      display: none;
+
+      @media @tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      @media @desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding:  0 130px;
+      }
     }
   }
 }
