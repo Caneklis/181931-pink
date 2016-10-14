@@ -50,6 +50,7 @@
     @media @desktop {
       flex-direction: row;
       justify-content: space-between;
+      align-items: flex-end;
       margin-top: -100px;
     }
   }
@@ -216,7 +217,6 @@
       order: 2;
       padding-top: 60px;
       background-color: @bg-grey;
-      margin-top: -60px;
       box-shadow: 0px -8px 15px -17px #000;
     }
   }
@@ -234,9 +234,12 @@
     margin-bottom: -35px;
 
     @media @tablet {
+      position: relative;
       width: 270px;
       height: 550px;
       margin-right: 44px;
+      margin-top: -40px;
+      margin-bottom: -66px;
     }
 
     @media @desktop {
@@ -251,9 +254,11 @@
       display: block;
       position: relative;
       z-index: 1;
+      width: 100%;
+      height: 302px;/*
       width: 200px;
       margin: auto;
-      order: 1;
+      order: 1;*/
     }
   }
 
